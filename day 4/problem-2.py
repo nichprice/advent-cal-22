@@ -28,14 +28,17 @@ def overlap(data):
         first = [nums[0], nums[1]]
         second = [nums[2], nums[3]]
 
-        if min(first) <= min(second) and max(first) >= max(second):
-            ans += 1
-        elif min(second) <= min(first) and max(second) >= max(first):
+        overlap = False
+        
+        for i in range(min(nums), max(nums) + 1):
+            if i >= min(first) and i >= min(second) and i <= max(first) and i <= max(second):
+                overlap = True
+        
+        if overlap == True:
             ans += 1
 
+        print(nums)
         print(f'{first} {second} {ans}')
-
-
 
 
 overlap(groups)
