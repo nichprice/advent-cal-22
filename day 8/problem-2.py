@@ -5,6 +5,7 @@ with open("/Users/nicholasprice/Desktop/Development/code/advent-cal-22/day 8/tre
 def looker(data):
 
     map = []
+    scores = []
 
     for string in data:
         row = []
@@ -12,10 +13,6 @@ def looker(data):
             row.append(int(number))
 
         map.append(row)
-
-    vis = ((len(map) - 2) * 2) + ((len(map[0]) - 2)*2) + 4
-
-    scores = []
 
     for i in range(1, len(map) - 1):
         for j in range(1, len(map[0]) - 1):
