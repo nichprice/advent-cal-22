@@ -31,6 +31,9 @@ def radio(data):
 
     print(f'steps =\n {steps} \n \nvals =\n {vals}')
 
+    for step in steps:
+        if step
+
 
 
 radio(instr)
